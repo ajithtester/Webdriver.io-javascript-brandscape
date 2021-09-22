@@ -16,13 +16,11 @@ describe("Brandscape Automation" , function(){
   
     it("Login", function(){
         
-        Login.waitForMailIdField()
-        Login.waitForPasswordField()
-
+    
         Login.enterMailid("superadmin@yopmail.com")
         Login.enterPassword("superadmin")
     
-        Login.waitForLoginButton()
+
         Login.clickLoginButton()
 
         Base.pauseLong()
@@ -41,10 +39,10 @@ describe("Brandscape Automation" , function(){
         
      it("Logout", function(){
 
-         Logout.waitForProfileButton()
+         
          Logout.ClickProfileButton()
 
-         Logout.waitForProfileButton()
+         
          Logout.ClickLogoutButton()
 
          Logout.lookForMailId()

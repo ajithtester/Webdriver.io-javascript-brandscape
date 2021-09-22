@@ -23,8 +23,8 @@ exports.config = {
     specs: 
     ['./webdrivertest/AutomationScript.js'],
     // Patterns to exclude.
-    exclude: 
-    ['./webdrivertest/pleaserun.js' , './webdrivertest/inputTest.js'],
+    // exclude: 
+    // ['./webdrivertest/pleaserun.js' , './webdrivertest/inputTest.js'],
     //
     // ============
     // Capabilities

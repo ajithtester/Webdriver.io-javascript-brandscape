@@ -5,13 +5,8 @@ class Logout {
          return $(".btn.btn-white.fs12.dropdown-toggle")
     }
 
-    waitForProfileButton (){
-
-        this.profileButton.waitForExist()
-    }
-
     ClickProfileButton () {
-
+        this.profileButton.waitForExist()
         this.profileButton.click()
 
     }
@@ -20,13 +15,9 @@ class Logout {
         return $("//a[normalize-space()='Logout']")
    }
 
-   waitForLogoutButton(){
-
-    this.logoutButton.waitForExist()
-}
-
    ClickLogoutButton () {
 
+    this.logoutButton.waitForExist()
     this.logoutButton.click()
 
 }

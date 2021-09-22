@@ -7,12 +7,8 @@ class Login {
         return $("input[type='email']")
     }
 
-    waitForMailIdField(){
-
-        this.mailIdField.waitForExist()
-    }
-
     enterMailid(mailId){
+        this.mailIdField.waitForExist()
         this.mailIdField.setValue(mailId)
         
     }
@@ -22,13 +18,9 @@ class Login {
         return $("input[type='password']")
     }
 
-    waitForPasswordField(){
-
-        this.passwordField.waitForExist()
-    }
-
     enterPassword(password) {
 
+        this.passwordField.waitForExist()
         this.passwordField.setValue(password)
     }
 
@@ -37,22 +29,19 @@ class Login {
         return $("button[type='submit']")
     }
 
-    waitForLoginButton () {
-
-        this.loginButton.waitForExist()
-
-    }
-
     clickLoginButton(){
 
+        this.loginButton.waitForExist()
         this.loginButton.click()
     }
 
     get dashBoard (){
+
          return $("//span[normalize-space()='Dashboard']")
     }
 
     lookForDashboard(){
+        
         expect(this.dashBoard).toBePresent()
     }
 }
