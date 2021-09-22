@@ -2,6 +2,7 @@
 import App from "./pageobject/App"
 import Base from "./pageobject/Base"
 import Login from "./pageobject/pages/Login"
+import Logout from "./pageobject/pages/Logout"
 
 describe("Brandscape Automation" , function(){
 
@@ -10,7 +11,7 @@ describe("Brandscape Automation" , function(){
         browser.maximizeWindow()
         App.OpenBrowser() //pageobject
         Base.pauseMedium()
-        Base.screenShot("Test.png")
+        Base.screenShot("BrowserOpen.png")
     })
   
     it("Login", function(){
@@ -25,29 +26,32 @@ describe("Brandscape Automation" , function(){
         Login.clickLoginButton()
 
         Base.pauseLong()
-    //     })
+        Base.screenShot("Login.png")
+         })
       
 
-    // it("Check Home", function(){
+     it("Check Home", function(){
 
-    //     let home = $("//span[contains(text(),'Dashboard')]")
-    //     expect(home).toBePresent()
-    //     browser.saveScreenshot("HomePage.png")
+         Login.lookForDashboard()
+    
+         Base.screenShot("HomePage.png")
         
-    //     })
+         })
     
         
-    // it("Logout", function(){
-    //     let profile = $(".btn.btn-white.fs12.dropdown-toggle")
-    //     profile.waitForExist()
-    //     profile.click()
-    
-    //     let logout = $("//a[normalize-space()='Logout']")
-    //     logout.waitForExist()
-    //     logout.click()
-    
-    //     let loginemail = $("//div[1]/form[1]/div[1]/input[1]")
-    //     expect(loginemail).toBePresent()
+     it("Logout", function(){
+
+         Logout.waitForProfileButton()
+         Logout.ClickProfileButton()
+
+         Logout.waitForProfileButton()
+         Logout.ClickLogoutButton()
+
+         Logout.lookForMailId()
+
+         Base.pauseLong()
+         Base.screenShot("Logout.png")
+
         
         })
 

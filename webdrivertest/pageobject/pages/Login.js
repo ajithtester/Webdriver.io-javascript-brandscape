@@ -14,6 +14,7 @@ class Login {
 
     enterMailid(mailId){
         this.mailIdField.setValue(mailId)
+        
     }
 
     get passwordField() {
@@ -45,6 +46,14 @@ class Login {
     clickLoginButton(){
 
         this.loginButton.click()
+    }
+
+    get dashBoard (){
+         return $("//span[normalize-space()='Dashboard']")
+    }
+
+    lookForDashboard(){
+        expect(this.dashBoard).toBePresent()
     }
 }
 
