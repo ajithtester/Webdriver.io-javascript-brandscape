@@ -1,0 +1,57 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1632307163857' stop='1632307195440'>
+    <name>Brandscape Automation</name>
+    <title>Brandscape Automation</title>
+    <test-cases>
+        <test-case start='1632307163858' status='broken' stop='1632307195439'>
+            <name>Login</name>
+            <title>Login</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-93.0.4577.82'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>invalid selector: An invalid or illegal selector was specified
+                  (Session info: chrome=93.0.4577.82)</message>
+                <stack-trace>Backtrace:
+                	Ordinal0 [0x00FAA2D3+2663123]
+                	Ordinal0 [0x00F3A491+2204817]
+                	Ordinal0 [0x00E22118+1057048]
+                	Ordinal0 [0x00E24844+1067076]
+                	Ordinal0 [0x00E2470E+1066766]
+                	Ordinal0 [0x00E24970+1067376]
+                	Ordinal0 [0x00E4C7D8+1230808]
+                	Ordinal0 [0x00E76A02+1403394]
+                	Ordinal0 [0x00E65A0A+1333770]
+                	Ordinal0 [0x00E74D8F+1396111]
+                	Ordinal0 [0x00E6589B+1333403]
+                	Ordinal0 [0x00E41F74+1187700]
+                	Ordinal0 [0x00E42DC9+1191369]
+                	GetHandleVerifier [0x011430D6+1610054]
+                	GetHandleVerifier [0x011EB53B+2299307]
+                	GetHandleVerifier [0x01038DA9+519705]
+                	GetHandleVerifier [0x01037759+513993]
+                	Ordinal0 [0x00F4112D+2232621]
+                	Ordinal0 [0x00F455F8+2250232]
+                	Ordinal0 [0x00F45732+2250546]
+                	Ordinal0 [0x00F4E591+2286993]
+                	BaseThreadInitThunk [0x76E2FA29+25]
+                	RtlGetAppContainerNamedObjectPath [0x77087A9E+286]
+                	RtlGetAppContainerNamedObjectPath [0x77087A6E+238]
+                    at Browser.runCommandWithHooks (C:\Users\ajithkumar.j\Desktop\WebdriverIo\node_modules\@wdio\sync\build\wrapCommand.js:100:24)
+                    at Browser.wrapCommandFn (C:\Users\ajithkumar.j\Desktop\WebdriverIo\node_modules\@wdio\sync\build\wrapCommand.js:67:44)
+                    at Browser.&lt;anonymous> (C:\Users\ajithkumar.j\Desktop\WebdriverIo\node_modules\@wdio\utils\build\shim.js:245:24)
+                    at $ (C:\Users\ajithkumar.j\Desktop\WebdriverIo\node_modules\@wdio\runner\build\index.js:190:42)
+                    at Context.&lt;anonymous> (C:\Users\ajithkumar.j\Desktop\WebdriverIo\webdrivertest\/AutomationScript.js:29:23)
+                    at Context.executeSync (C:\Users\ajithkumar.j\Desktop\WebdriverIo\node_modules\@wdio\sync\build\index.js:38:22)
+                    at C:\Users\ajithkumar.j\Desktop\WebdriverIo\node_modules\@wdio\sync\build\index.js:69:68</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
