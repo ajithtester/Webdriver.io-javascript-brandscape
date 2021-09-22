@@ -1,53 +1,53 @@
-import {short, medium , long} from "../lib/timeouts"
-import {mobile , tablet , desktop} from "../lib/devices"
+
+import App from "./pageobject/App"
+import Base from "./pageobject/Base"
+import Login from "./pageobject/pages/Login"
+
 describe("Brandscape Automation" , function(){
 
     it("Redirecting to Brandscape", function(){
 
         browser.maximizeWindow()
-        browser.url('https://devops-test.d2xm4odj59p3vm.amplifyapp.com/login')
-        browser.pause(short)
-        browser.saveScreenshot("LoginPage.png")
+        App.OpenBrowser() //pageobject
+        Base.pauseMedium()
+        Base.screenShot("Test.png")
     })
   
     it("Login", function(){
+        
+        Login.waitForMailIdField()
+        Login.waitForPasswordField()
 
-        let emailId = $("//div[1]/form[1]/div[1]/input[1]")
-        emailId.waitForExist()
-        emailId.setValue("superadmin@yopmail.com")
+        Login.enterMailid("superadmin@yopmail.com")
+        Login.enterPassword("superadmin")
+    
+        Login.waitForLoginButton()
+        Login.clickLoginButton()
 
-        let passWord = $("//div[2]/div[1]/input[1]")
-        passWord.waitForExist()
-        passWord.setValue("superadmin")
-
-        let loginButton = $("button[type='submit']")
-        loginButton.waitForExist()
-        loginButton.click()
-
-        browser.pause(long)
-        })
+        Base.pauseLong()
+    //     })
       
 
-    it("Check Home", function(){
+    // it("Check Home", function(){
 
-        let home = $("//span[contains(text(),'Dashboard')]")
-        expect(home).toBePresent()
-        browser.saveScreenshot("HomePage.png")
+    //     let home = $("//span[contains(text(),'Dashboard')]")
+    //     expect(home).toBePresent()
+    //     browser.saveScreenshot("HomePage.png")
         
-        })
+    //     })
     
         
-    it("Logout", function(){
-        let profile = $(".btn.btn-white.fs12.dropdown-toggle")
-        profile.waitForExist()
-        profile.click()
+    // it("Logout", function(){
+    //     let profile = $(".btn.btn-white.fs12.dropdown-toggle")
+    //     profile.waitForExist()
+    //     profile.click()
     
-        let logout = $("//a[normalize-space()='Logout']")
-        logout.waitForExist()
-        logout.click()
+    //     let logout = $("//a[normalize-space()='Logout']")
+    //     logout.waitForExist()
+    //     logout.click()
     
-        let loginemail = $("//div[1]/form[1]/div[1]/input[1]")
-        expect(loginemail).toBePresent()
+    //     let loginemail = $("//div[1]/form[1]/div[1]/input[1]")
+    //     expect(loginemail).toBePresent()
         
         })
 

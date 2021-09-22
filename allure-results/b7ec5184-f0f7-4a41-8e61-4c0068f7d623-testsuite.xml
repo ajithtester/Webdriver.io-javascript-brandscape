@@ -1,0 +1,42 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1632315048407' stop='1632315060268'>
+    <name>Brandscape Automation</name>
+    <title>Brandscape Automation</title>
+    <test-cases>
+        <test-case start='1632315048408' status='broken' stop='1632315059670'>
+            <name>Redirecting to Brandscape</name>
+            <title>Redirecting to Brandscape</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-93.0.4577.82'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>_Base.default.pauseShort is not a function</message>
+                <stack-trace>TypeError: _Base.default.pauseShort is not a function
+                    at Context.&lt;anonymous> (C:\Users\ajithkumar.j\Desktop\WebdriverIo\webdrivertest\/AutomationScript.js:12:19)
+                    at Context.executeSync (C:\Users\ajithkumar.j\Desktop\WebdriverIo\node_modules\@wdio\sync\build\index.js:38:22)
+                    at C:\Users\ajithkumar.j\Desktop\WebdriverIo\node_modules\@wdio\sync\build\index.js:69:68</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1632315059671' status='passed' stop='1632315060268'>
+            <name>Login</name>
+            <title>Login</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-93.0.4577.82'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

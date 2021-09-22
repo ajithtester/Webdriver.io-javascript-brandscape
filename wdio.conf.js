@@ -21,7 +21,7 @@ exports.config = {
     // will be called from there.
     //
     specs: 
-    ['./webdrivertest/**/*.js'],
+    ['./webdrivertest/AutomationScript.js'],
     // Patterns to exclude.
     exclude: 
     ['./webdrivertest/pleaserun.js' , './webdrivertest/inputTest.js'],
