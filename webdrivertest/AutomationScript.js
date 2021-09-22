@@ -37,7 +37,7 @@ describe("Brandscape Automation" , function(){
         })
     
         
-    it("", function(){
+    it("Logout", function(){
         let profile = $(".btn.btn-white.fs12.dropdown-toggle")
         profile.waitForExist()
         profile.click()
